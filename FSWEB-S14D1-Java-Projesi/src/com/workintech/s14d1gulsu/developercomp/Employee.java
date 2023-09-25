@@ -5,10 +5,9 @@ public class Employee {
     private String name;
     private double salary;
 
-    public Employee(int id, String name, double salary) {
+    public Employee(int id, String name) {
         this.id = id;
         this.name = name;
-        this.salary = salary;
     }
 
     public int getId() {
@@ -36,6 +35,15 @@ public class Employee {
     }
 
     public void work() {
-        System.out.println("Employee starts to working");
+        System.out.println("Employee starts working");
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }
